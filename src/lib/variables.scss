@@ -1,0 +1,82 @@
+$colors: (
+	base: #F8F8F8,
+	highlight: #fff,
+  dark-text: #1F2933,
+  regular-text: #323F4B,
+  light-text: #52606D,
+	primary: #0967D2,
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16)
+);
+//dark theme
+$colors-dark: (
+  base: #F8F8F8,
+	highlight: #fff,
+  dark-text: #1F2933,
+  regular-text: #323F4B,
+  light-text: #52606D,
+	primary: #0967D2,
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16)
+);
+//converting scss variable into css variable
+:root {
+    @each $name, $color in $colors{
+        --color-#{$name} : #{$color};
+    }
+  --theme: 'light';
+}
+
+@media(prefers-color-scheme: dark) {
+    :root {
+        @each $name, $color in $colors-dark{
+            --color-#{$name} : #{$color};
+        }
+    --theme : 'dark';
+    }
+}
+//creating a function to get color instead of using css varible
+@function getColor($color-name){
+    @return var(--color-#{$color-name});
+}
+
+$font-family: Manrope;
+$border-radius: 10px;
+
+// Small tablets and large smartphones (landscape view)
+$screen-mobile: 576px;
+
+// Small tablets (portrait view)
+$screen-tablet: 768px;
+
+// Tablets and small desktops
+$screen-desktop: 992px;
+
+// Large tablets and desktops
+$screen-xl-desktop: 1250px;
+
+// Small devices
+@mixin mobile {
+	@media (min-width: #{$screen-mobile}) {
+		@content;
+	}
+ }
+ 
+ // Medium devices
+ @mixin tablet {
+	@media (min-width: #{$screen-tablet}) {
+		@content;
+	}
+ }
+ 
+ // Large devices
+ @mixin desktop {
+	@media (min-width: #{$screen-desktop}) {
+		@content;
+	}
+ }
+ 
+ // Extra large devices
+ @mixin xl-desktop {
+	@media (min-width: #{$screen-xl-desktop}) {
+		@content;
+	}
+}

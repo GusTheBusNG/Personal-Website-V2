@@ -1,0 +1,7 @@
+@import '../lib/variables.scss';
+
+.text {
+  font-size: 18px;
+  font-weight: 400;
+  color: getColor(regular-text)
+}

@@ -1,0 +1,19 @@
+@import '../lib/variables.scss';
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: getColor(base);
+  font-family: $font-family;
+}
+
+h1, h2, h3, h4, p {
+  margin: 0;
+  padding: 0;
+}
+
+.the-whole-dang-thing {
+  margin: 0 auto;
+  padding: 2rem 1rem 0;
+  max-width: 1300px;
+}

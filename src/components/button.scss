@@ -1,0 +1,15 @@
+@import '../lib/variables.scss';
+
+.button {
+  padding: 1rem 1.5rem;
+  margin-bottom: 1rem;
+
+  border: none;
+  border-radius: $border-radius;
+  background-color: transparent;
+  box-shadow: getColor(box-shadow);
+
+  color: getColor(regular-text);
+  font-size: 24px;
+  font-weight: 400;
+}
