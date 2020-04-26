@@ -55,7 +55,7 @@ module.exports = {
         apiSecret: process.env.CLOUDINARY_API_SECRET,
         resourceType: `image`,
         type: `upload`,
-        prefix: `Personal%20Website/`
+        prefix: `Personal Website/`
       }
     },
     {
@@ -64,7 +64,7 @@ module.exports = {
         cloudName: process.env.CLOUDINARY_CLOUD_NAME,
         apiKey: process.env.CLOUDINARY_API_KEY,
         apiSecret: process.env.CLOUDINARY_API_SECRET,
-        uploadFolder: `Personal%20Website`,
+        uploadFolder: `Personal Website`,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

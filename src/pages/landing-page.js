@@ -6,6 +6,7 @@ import SEO from '../components/seo'
 import Heading from '../components/heading'
 import Text from '../components/text'
 import Button from '../components/button'
+import Image from '../components/image'
 
 const IndexPage = ({ data: { markdownRemark: { frontmatter: {
   title,
@@ -17,6 +18,7 @@ const IndexPage = ({ data: { markdownRemark: { frontmatter: {
     <SEO title={title} />
     <Heading variant="lg">{heading}</Heading>
     <Text>{subheading}</Text>
+    <Image src="Nick" />
     {
       buttons.map(({link, openNewTab, text}) => (
         <Button link={link} openNewTab={openNewTab}>{text}</Button>

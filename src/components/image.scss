@@ -1,0 +1,20 @@
+@import '../lib/variables.scss';
+
+.image {
+  position: relative;
+  margin: 0 5% 5% 0;
+
+  &__img {
+    border-radius: $border-radius;
+  }
+
+  &__outline {
+    position: absolute;
+    height: 98%;
+    width: 98%;
+    top: 5%;
+    left: 5%;
+    border: solid 3px getColor(primary);
+    border-radius: $border-radius;
+  }
+}
