@@ -14,15 +14,17 @@ import Subheading from '../components/subheading'
 import Quote from '../components/quote'
 
 const IndexPage = ({ data: { markdownRemark: { frontmatter: {
-  title,
-  heading,
-  subheading,
-  photo,
-  buttons,
-  scrollIndicator,
-  storyHeading,
-  stories
-}}}}) => (
+    title,
+    heading,
+    subheading,
+    buttons,
+    scrollIndicator,
+    storyHeading,
+    stories
+  }},
+  Nick: { childCloudinaryAsset: { fluid: Nick }},
+  NickMountain: { childCloudinaryAsset: { fluid: NickMountain }}
+}}) => (
   <Layout>
     <SEO title={title} />
     <div className="landing-page">
@@ -30,11 +32,11 @@ const IndexPage = ({ data: { markdownRemark: { frontmatter: {
         <Heading variant="lg">{heading}</Heading>
         <Text>{subheading}</Text>
       </div>
-      <Image src={photo} className="landing-page__image" />
+      <Image fluid={Nick} alt="Nick" className="landing-page__image" />
       <div className="landing-page__buttons">
         {
           buttons.map(({link, openNewTab, text}) => (
-            <Button link={link} openNewTab={openNewTab}>{text}</Button>
+            <Button key={link} link={link} openNewTab={openNewTab}>{text}</Button>
           ))
         }
       </div>
@@ -43,9 +45,10 @@ const IndexPage = ({ data: { markdownRemark: { frontmatter: {
     <Heading variant="sm">{storyHeading}</Heading>
     {
       stories.map(({ subheading, content, quote: { content: quoteContent, author} }) => (
-        <div>
+        <div key={subheading}>
           <Subheading>{subheading}</Subheading>
           <Text>{content}</Text>
+          <Image fluid={NickMountain} alt="NickMountain" />
           <Quote author={author}>{quoteContent}</Quote>
         </div>
       ))
@@ -62,7 +65,6 @@ export const pageQuery = graphql`
         title
         heading
         subheading
-        photo
         buttons {
           link
           openNewTab
@@ -77,6 +79,20 @@ export const pageQuery = graphql`
             content
             author
           }
+        }
+      }
+    }
+    Nick: file(name: {eq: "Nick"}) {
+      childCloudinaryAsset {
+        fluid {
+          ...CloudinaryAssetFluid
+        }
+      }
+    }
+    NickMountain: file(name: {eq: "Nick-mountain"}) {
+      childCloudinaryAsset {
+        fluid {
+          ...CloudinaryAssetFluid
         }
       }
     }
