@@ -10,12 +10,18 @@ import Image from '../components/image'
 import ScrollIndicator from '../components/scrollIndicator'
 
 import './landing-page.scss'
+import Subheading from '../components/subheading'
+import Quote from '../components/quote'
 
 const IndexPage = ({ data: { markdownRemark: { frontmatter: {
   title,
   heading,
   subheading,
-  buttons
+  photo,
+  buttons,
+  scrollIndicator,
+  storyHeading,
+  stories
 }}}}) => (
   <Layout>
     <SEO title={title} />
@@ -24,7 +30,7 @@ const IndexPage = ({ data: { markdownRemark: { frontmatter: {
         <Heading variant="lg">{heading}</Heading>
         <Text>{subheading}</Text>
       </div>
-      <Image src="Nick" className="landing-page__image" />
+      <Image src={photo} className="landing-page__image" />
       <div className="landing-page__buttons">
         {
           buttons.map(({link, openNewTab, text}) => (
@@ -32,8 +38,18 @@ const IndexPage = ({ data: { markdownRemark: { frontmatter: {
           ))
         }
       </div>
-      <ScrollIndicator text="My Story" className="landing-page__scroll-indicator" />
+      <ScrollIndicator text={scrollIndicator} className="landing-page__scroll-indicator" />
     </div>
+    <Heading variant="sm">{storyHeading}</Heading>
+    {
+      stories.map(({ subheading, content, quote: { content: quoteContent, author} }) => (
+        <div>
+          <Subheading>{subheading}</Subheading>
+          <Text>{content}</Text>
+          <Quote author={author}>{quoteContent}</Quote>
+        </div>
+      ))
+    }
   </Layout>
 )
 
@@ -46,10 +62,21 @@ export const pageQuery = graphql`
         title
         heading
         subheading
+        photo
         buttons {
           link
           openNewTab
           text
+        }
+        scrollIndicator
+        storyHeading
+        stories {
+          subheading
+          content
+          quote {
+            content
+            author
+          }
         }
       }
     }

@@ -1,0 +1,7 @@
+@import '../lib/variables.scss';
+
+.subheading {
+  font-size: 24px;
+  font-weight: 600;
+  color: getColor(light-text);
+}
