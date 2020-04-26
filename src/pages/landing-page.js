@@ -7,6 +7,7 @@ import Heading from '../components/heading'
 import Text from '../components/text'
 import Button from '../components/button'
 import Image from '../components/image'
+import ScrollIndicator from '../components/scrollIndicator'
 
 const IndexPage = ({ data: { markdownRemark: { frontmatter: {
   title,
@@ -24,6 +25,7 @@ const IndexPage = ({ data: { markdownRemark: { frontmatter: {
         <Button link={link} openNewTab={openNewTab}>{text}</Button>
       ))
     }
+    <ScrollIndicator text="My Story" />
   </Layout>
 )
 

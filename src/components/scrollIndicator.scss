@@ -1,0 +1,22 @@
+@import '../lib/variables.scss';
+
+.scroll-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__text {
+    font-size: 18px;
+    font-weight: 400;
+    color: getColor(regular-text);
+  }
+
+  &__chevron {
+    width: 25px;
+    color: getColor(regular-text);
+
+    &:nth-of-type(2) {
+      margin-top: -15px;
+    }
+  }
+}
