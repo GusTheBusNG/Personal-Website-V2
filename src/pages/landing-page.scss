@@ -1,0 +1,46 @@
+@import '../lib/variables.scss';
+
+.landing-page {
+  display: grid;
+  height: 100vh;
+  width: 100%;
+
+  align-items: center;
+  justify-content: center;
+
+  &__heading {
+    margin: 0 0 1rem;
+  }
+
+  &__image {
+    width: 100%;
+    justify-self: center;
+    max-height: 18rem;
+    max-width: 18rem;
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem 0 0;
+  }
+
+  @include tablet {
+    grid: 70% 20% 10% / 1fr 1fr;
+
+    &__heading {
+      margin: 0 2rem;
+    }
+
+    &__buttons {
+      grid-area: 2 / 1 / 3 / 3;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+
+    &__scroll-indicator {
+      grid-area: 3 / 1 / 4 / 3;
+    }
+  }
+}

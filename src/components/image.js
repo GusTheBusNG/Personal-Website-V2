@@ -4,7 +4,7 @@ import Img from "gatsby-image"
 
 import './image.scss'
 
-const Image = ({ src }) => {
+const Image = ({ src, className = ''}) => {
   const queryDict = {
     Nick: useStaticQuery(graphql`
       query {
@@ -21,7 +21,7 @@ const Image = ({ src }) => {
   const data = queryDict[src];
 
   return (
-    <div className="image">
+    <div className={`image ${className}`}>
       <div className="image__outline"></div>
       <Img
         className="image__img"

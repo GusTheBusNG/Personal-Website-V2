@@ -20,6 +20,7 @@
     width: 132px;
     height: 3px;
 
+    border-radius: $border-radius;
     background-color: getColor(primary);
   }
 }
