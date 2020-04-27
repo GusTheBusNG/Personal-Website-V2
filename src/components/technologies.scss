@@ -1,0 +1,13 @@
+@import '../lib/variables.scss';
+
+.technologies {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__technology {
+    color: getColor(light-text);
+    font-size: 18px;
+    font-weight: 300;
+    margin-right: 0.75rem;
+  }
+}

@@ -4,9 +4,15 @@ import PropTypes from 'prop-types'
 import './Button.scss';
 import { Link } from 'gatsby';
 
-export const Button = ({ link, children, openNewTab = false, className }) => {
+export const Button = ({
+  link,
+  children,
+  openNewTab = false,
+  className,
+  variant
+}) => {
   const button = (
-    <button className={`button ${className}`}>
+    <button className={`button ${variant} ${className}`}>
       {children}
     </button>
   );
