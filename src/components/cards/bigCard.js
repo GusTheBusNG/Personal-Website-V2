@@ -38,7 +38,7 @@ const BigCard = ({
     <div className="big-card__bullets">
       {
         bullets.map(bullet => (
-          <Bullet>{bullet}</Bullet>
+          <Bullet key={bullet}>{bullet}</Bullet>
         ))
       }
     </div>

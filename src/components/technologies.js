@@ -6,7 +6,7 @@ const Technologies = ({ technologies, className='' }) => (
   <div className={`technologies ${className}`}>
     {
       technologies.map(technology => (
-        <p className="technologies__technology">{technology}</p>
+        <p className="technologies__technology" key={technology}>{technology}</p>
       ))
     }
   </div>

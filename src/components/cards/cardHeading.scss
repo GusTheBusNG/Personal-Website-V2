@@ -1,12 +1,7 @@
 @import '../../lib/variables.scss';
 
 .card-heading {
-  display: grid;
-  grid: repeat(auto, 3) / auto;
-
   &__title {
-    grid-row: 2 / 3;
-
     font-size: 28px;
     font-weight: 500;
     color: getColor(primary);
@@ -14,16 +9,12 @@
   }
 
   &__company {
-    grid-row: 1 / 2;
-
     font-size: 18px;
     font-weight: 800;
     color: getColor(light-text);
   }
 
   &__timespan {
-    grid-row: 3 / 4;
-
     font-size: 18px;
     font-weight: 300;
     color: getColor(light-text);
