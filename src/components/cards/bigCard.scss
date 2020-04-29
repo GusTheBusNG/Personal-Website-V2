@@ -4,6 +4,7 @@
   display: grid;
   grid-template-columns: 50% 50%;
 
+  height: fit-content;
   max-width: 35rem;
   padding: 0.5rem;
 
@@ -67,6 +68,10 @@
       width: 3rem;
 
       margin: 0 0 0 auto;
+    }
+
+    &__bullets {
+      margin-bottom: 0.5rem;
     }
 
     &__location {

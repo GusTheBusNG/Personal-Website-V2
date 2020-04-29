@@ -16,9 +16,9 @@ const BigCard = ({
   button,
   bullets,
   technologies,
-  paw
+  className
 }) => (
-  <div className="big-card">
+  <div className={`big-card ${className}`}>
     <CardHeading
       className="big-card__heading"
       title={title}
@@ -26,10 +26,10 @@ const BigCard = ({
       timespan={timespan}
     />
     {
-      paw && 
+      picture.fluid && 
         <Image
           className="big-card__image"
-          fluid={paw}
+          fluid={picture.fluid}
           alt={picture.name} 
           link={picture.link}
           outline={false}

@@ -1,0 +1,32 @@
+@import '../lib/variables.scss';
+
+.horizontal-container {
+  position: relative;
+  padding: 0 1rem 1rem;
+
+  @include xl-desktop {
+    padding-left: calc((100vw - #{$screen-xl-desktop}) / 2);
+  }
+
+  display: flex;
+  flex-wrap: nowrap;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: auto;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &__card {
+    flex: 0 0 auto;
+    width: 80vw;
+
+    margin-right: 1rem;
+  }
+
+  &::after {
+    content: '';
+    flex: 0 0 auto;
+    width: 0.25rem;
+  }
+}

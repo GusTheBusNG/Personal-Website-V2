@@ -5,6 +5,7 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 import Heading from '../components/heading'
 import BigCard from '../components/cards/bigCard'
+import HorizontalContainer from '../components/horizontal-container'
 
 import './landing-page.scss'
 
@@ -15,13 +16,18 @@ const ProfessionalPage = ({ data: { markdownRemark: { frontmatter: {
   }},
   paw: { childCloudinaryAsset: { fluid: paw }},
 }}) => (
-  <Layout>
-    <SEO title={title} />
-    <Heading>{heading}</Heading>
-    {
-      experiences.map(experience => <BigCard {...experience} paw={paw} />)
-    }
-  </Layout>
+  <>
+    <Layout>
+      <SEO title={title} />
+      <Heading>{heading}</Heading>
+    </Layout>
+    <HorizontalContainer
+      Card={BigCard} 
+      data={experiences}
+      photos={{ paw }}
+      filter="title"
+    />
+  </>
 )
 
 export default ProfessionalPage
