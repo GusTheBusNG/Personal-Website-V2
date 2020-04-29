@@ -92,7 +92,6 @@ projects:
     picture:
       name: paw
       link: https://clemsonchoirs.com
-    location: Clemson, SC
     button:
       openNewTab: true
       link: https://clemsonchoirs.com
@@ -113,7 +112,6 @@ projects:
     picture:
       name: paw
       link: https://clemsonchoirs.com
-    location: Clemson, SC
     button:
       openNewTab: true
       link: https://clemsonchoirs.com
@@ -129,4 +127,13 @@ projects:
       - GraphQL
       - HTML / (S)CSS
       - JavaScript
+thirdHeading: Awards
+awards:
+  - title: President's list adsfasdfasdf
+    company: BSA
+    timespan: June 2015
+    picture:
+      name: paw
+      link: https://clemsonchoirs.com
+    description: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 ---

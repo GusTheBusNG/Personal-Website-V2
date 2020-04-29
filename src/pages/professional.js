@@ -7,6 +7,7 @@ import Heading from '../components/heading'
 import BigCard from '../components/cards/bigCard'
 import HorizontalContainer from '../components/horizontal-container'
 import Spacer from '../components/spacer'
+import Card from '../components/cards/mediumCard'
 
 import './landing-page.scss'
 
@@ -15,35 +16,56 @@ const ProfessionalPage = ({ data: { markdownRemark: { frontmatter: {
     heading,
     experiences,
     secondHeading,
-    projects
+    projects,
+    thirdHeading,
+    awards
   }},
   paw: { childCloudinaryAsset: { fluid: paw }},
-}}) => (
-  <>
-    <Layout>
-      <SEO title={title} />
-      <Heading>{heading}</Heading>
-      <Spacer variant='md' />
-    </Layout>
-    <HorizontalContainer
-      Card={BigCard} 
-      data={experiences}
-      photos={{ paw }}
-      filter="title"
-    />
-    <Layout>
-      <Spacer variant='lg' />
-      <Heading>{secondHeading}</Heading>
-      <Spacer variant='md' />
-    </Layout>
-    <HorizontalContainer
-      Card={BigCard} 
-      data={projects}
-      photos={{ paw }}
-      filter="title"
-    />
-  </>
-)
+}}) => {
+  const photos = { paw };
+
+  return (
+    <div>
+      <Layout>
+        <SEO title={title} />
+        <Heading>{heading}</Heading>
+        <Spacer variant='md' />
+      </Layout>
+      <HorizontalContainer
+        Card={BigCard} 
+        data={experiences}
+        photos={photos}
+        filter="title"
+      />
+      <Layout>
+        <Spacer variant='lg' />
+        <Heading>{secondHeading}</Heading>
+        <Spacer variant='md' />
+      </Layout>
+      <HorizontalContainer
+        Card={BigCard} 
+        data={projects}
+        photos={photos}
+        filter="title"
+      />
+      <Layout>
+        <Spacer variant='lg' />
+        <Heading>{thirdHeading}</Heading>
+        <Spacer variant='md' />
+        <div className="awards-container">
+          {
+            awards.map(award => 
+              <Card
+                {...award}
+                picture={{ fluid: photos[award.picture.name], ...award.picture }}
+              />
+            )
+          }
+        </div>
+      </Layout>
+    </div>
+  )
+}
 
 export default ProfessionalPage
 
@@ -78,7 +100,6 @@ export const pageQuery = graphql`
             name
             link
           }
-          location
           button {
             openNewTab
             link
@@ -86,6 +107,17 @@ export const pageQuery = graphql`
           }
           bullets
           technologies
+        }
+        thirdHeading
+        awards {
+          title
+          company
+          timespan
+          picture {
+            name
+            link
+          }
+          description
         }
       }
     }
