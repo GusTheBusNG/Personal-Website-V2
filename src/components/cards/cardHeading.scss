@@ -20,4 +20,18 @@
     color: getColor(light-text);
     margin-top: 0.2rem;
   }
+
+  &.sm {
+    .card-heading__title {
+      font-size: 21px;
+    }
+
+    .card-heading__company {
+      font-size: 14px;
+    }
+
+    .card-heading__timespan {
+      font-size: 14px;
+    }
+  }
 }

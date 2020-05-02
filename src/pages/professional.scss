@@ -1,0 +1,8 @@
+@import '../lib/variables.scss';
+
+.awards-container {
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: space-around;
+}

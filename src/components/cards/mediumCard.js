@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import AnimateHeight from 'react-animate-height'
 import CardHeading from './cardHeading'
 import Image from '../image'
-import chevron from '../../images/chevron.svg'
+import Chevron from '../../assets/chevron.svg'
 
 import './mediumCard.scss'
 
@@ -35,14 +35,13 @@ const MediumCard = ({
           title={title}
           company={company}
           timespan={timespan}
+          variant="sm"
         />
         { !!description &&
           <button 
             onClick={() => setHeight(height === 0 ? 'auto' : 0)} 
             className={`medium-card__expand ${height === 'auto' ? 'expanded' : 'collapsed'}`}>
-            <img
-              src={chevron}
-              alt="chevron"
+            <Chevron
               className="medium-card__expand__image" 
             />
           </button>

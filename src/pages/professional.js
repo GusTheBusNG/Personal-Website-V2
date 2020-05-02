@@ -9,7 +9,7 @@ import HorizontalContainer from '../components/horizontal-container'
 import Spacer from '../components/spacer'
 import Card from '../components/cards/mediumCard'
 
-import './landing-page.scss'
+import './professional.scss';
 
 const ProfessionalPage = ({ data: { markdownRemark: { frontmatter: {
     title,
