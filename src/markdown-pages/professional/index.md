@@ -171,4 +171,17 @@ awards:
       name: paw
       link: https://clemsonchoirs.com
     description: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+fourthHeading: Education
+school: Clemson University
+major: Bachelor of Science in Computer Science
+minor: Minor in Business Administration
+gpa: GPA 3.91/4.00
+subheading: Notable Classes
+classes:
+  - title: Virtual Reality Systems
+    timespan: Fall 2019
+    description: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+  - title: Virtual Reality Systems
+    timespan: Fall 2019
+
 ---

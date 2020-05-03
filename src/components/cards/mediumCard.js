@@ -21,7 +21,7 @@ const MediumCard = ({
     <div className={`card-container ${className}`}>
       <div className="medium-card">
         {
-          picture.fluid &&
+          picture && picture.fluid &&
             <Image
               alt={picture.name}
               className="medium-card__image"

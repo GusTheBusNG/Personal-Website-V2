@@ -8,6 +8,8 @@ import BigCard from '../components/cards/bigCard'
 import HorizontalContainer from '../components/horizontal-container'
 import Spacer from '../components/spacer'
 import Card from '../components/cards/mediumCard'
+import CardHeading from '../components/cards/cardHeading'
+import Subheading from '../components/subheading'
 
 import './professional.scss';
 
@@ -18,7 +20,14 @@ const ProfessionalPage = ({ data: { markdownRemark: { frontmatter: {
     secondHeading,
     projects,
     thirdHeading,
-    awards
+    awards,
+    fourthHeading,
+    school,
+    major,
+    minor,
+    gpa,
+    subheading,
+    classes
   }},
   paw: { childCloudinaryAsset: { fluid: paw }},
 }}) => {
@@ -59,6 +68,26 @@ const ProfessionalPage = ({ data: { markdownRemark: { frontmatter: {
                 {...award}
                 picture={{ fluid: photos[award.picture.name], ...award.picture }}
               />
+            )
+          }
+        </div>
+
+        <Spacer variant='lg' />
+        <Heading lineColor="#F66733">{fourthHeading}</Heading>
+        <CardHeading
+          title={major}
+          titleColor="#323F4B"
+          company={school}
+          timespan={minor}
+        >
+          {gpa}
+        </CardHeading>
+        <Spacer variant="md" />
+        <Subheading>{subheading}</Subheading>
+        <div className="awards-container">
+          {
+            classes.map(class1 => 
+              <Card {...class1} />
             )
           }
         </div>
@@ -117,6 +146,17 @@ export const pageQuery = graphql`
             name
             link
           }
+          description
+        }
+        fourthHeading
+        school
+        major
+        minor
+        gpa
+        subheading
+        classes {
+          title
+          timespan
           description
         }
       }

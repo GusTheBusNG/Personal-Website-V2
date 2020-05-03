@@ -3,10 +3,10 @@ import PropTypes from 'prop-types'
 
 import './heading.scss'
 
-const Heading = ({ variant, children, className = '' }) => (
+const Heading = ({ variant, children, className = '', lineColor }) => (
   <div className={`heading ${className}`}>
     <h1 className={`heading__content ${variant}`}>{children}</h1>
-    <div className="heading__line" />
+    <div className="heading__line" style={lineColor && { backgroundColor: lineColor}} />
   </div>
 )
 
