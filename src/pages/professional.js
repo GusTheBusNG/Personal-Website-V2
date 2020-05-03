@@ -10,6 +10,7 @@ import Spacer from '../components/spacer'
 import Card from '../components/cards/mediumCard'
 import CardHeading from '../components/cards/cardHeading'
 import Subheading from '../components/subheading'
+import SocialMediaLine from '../components/social-media-line'
 
 import './professional.scss';
 
@@ -84,6 +85,7 @@ const ProfessionalPage = ({ data: { markdownRemark: { frontmatter: {
         </CardHeading>
         <Spacer variant="md" />
         <Subheading>{subheading}</Subheading>
+        <Spacer variant="sm" />
         <div className="awards-container">
           {
             classes.map(class1 => 
@@ -91,6 +93,7 @@ const ProfessionalPage = ({ data: { markdownRemark: { frontmatter: {
             )
           }
         </div>
+        <SocialMediaLine />
       </Layout>
     </div>
   )
