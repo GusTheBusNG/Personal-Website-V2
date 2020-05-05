@@ -16,10 +16,24 @@
   }
 
   &__line {
-    width: 132px;
+    width: 0;
     height: 3px;
 
     border-radius: $border-radius;
     background-color: getColor(primary);
+
+    @include animation('slideOut 1.5s forwards ease-out');
+  }
+}
+
+@include keyframes(slideOut) {
+  from {
+    width: 0px;
+    opacity: 0;
+  }
+
+  to {
+    width: 132px;
+    opacity: 100%;
   }
 }
