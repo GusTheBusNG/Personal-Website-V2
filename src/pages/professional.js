@@ -11,6 +11,7 @@ import Card from '../components/cards/mediumCard'
 import CardHeading from '../components/cards/cardHeading'
 import Subheading from '../components/subheading'
 import SocialMediaLine from '../components/social-media-line'
+import Section from '../components/section'
 
 import './professional.scss';
 
@@ -35,30 +36,34 @@ const ProfessionalPage = ({ data: { markdownRemark: { frontmatter: {
   const photos = { paw };
 
   return (
-    <div>
-      <Layout>
-        <SEO title={title} />
+    <Layout>
+      <SEO title={title} />
+      <Section noPadding={
+        <HorizontalContainer
+          Card={BigCard} 
+          data={experiences}
+          photos={photos}
+          filter="title"
+        />
+      }>
         <Heading>{heading}</Heading>
         <Spacer variant='md' />
-      </Layout>
-      <HorizontalContainer
-        Card={BigCard} 
-        data={experiences}
-        photos={photos}
-        filter="title"
-      />
-      <Layout>
+      </Section>
+        
+      <Section noPadding={
+        <HorizontalContainer
+          Card={BigCard} 
+          data={projects}
+          photos={photos}
+          filter="title"
+        />
+      }>
         <Spacer variant='lg' />
         <Heading>{secondHeading}</Heading>
         <Spacer variant='md' />
-      </Layout>
-      <HorizontalContainer
-        Card={BigCard} 
-        data={projects}
-        photos={photos}
-        filter="title"
-      />
-      <Layout>
+      </Section>
+
+      <Section>
         <Spacer variant='lg' />
         <Heading>{thirdHeading}</Heading>
         <Spacer variant='md' />
@@ -72,7 +77,9 @@ const ProfessionalPage = ({ data: { markdownRemark: { frontmatter: {
             )
           }
         </div>
+      </Section>
 
+      <Section>
         <Spacer variant='lg' />
         <Heading lineColor="#F66733">{fourthHeading}</Heading>
         <CardHeading
@@ -93,9 +100,12 @@ const ProfessionalPage = ({ data: { markdownRemark: { frontmatter: {
             )
           }
         </div>
+      </Section>
+
+      <Section>
         <SocialMediaLine />
-      </Layout>
-    </div>
+      </Section>
+    </Layout>
   )
 }
 

@@ -1,0 +1,7 @@
+@import '../lib/variables.scss';
+
+.section-padding {
+  margin: 0 auto;
+  padding: 0 1rem;
+  max-width: $screen-xl-desktop;
+}
