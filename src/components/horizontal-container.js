@@ -5,8 +5,7 @@ import './horizontal-container.scss'
 const HorizontalContainer = ({
   Card,
   data,
-  photos,
-  filter
+  photos
 }) => (
   <div className="horizontal-container">
     {

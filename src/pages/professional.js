@@ -46,6 +46,7 @@ const ProfessionalPage = ({ data: { markdownRemark: { frontmatter: {
           filter="title"
         />
       }>
+        <Spacer variant='md' />
         <Heading>{heading}</Heading>
         <Spacer variant='md' />
       </Section>
