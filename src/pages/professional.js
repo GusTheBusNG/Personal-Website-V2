@@ -32,8 +32,14 @@ const ProfessionalPage = ({ data: { markdownRemark: { frontmatter: {
     classes
   }},
   paw: { childCloudinaryAsset: { fluid: paw }},
+  bmw: { childCloudinaryAsset: { fluid: bmw }},
+  eagleScout: { childCloudinaryAsset: { fluid: eagleScout }},
+  tsa: { childCloudinaryAsset: { fluid: tsa }},
+  salkehatchie: { childCloudinaryAsset: { fluid: salkehatchie }},
+  honorbandofamerica: { childCloudinaryAsset: { fluid: honorbandofamerica }},
+  fca: { childCloudinaryAsset: { fluid: fca }},
 }}) => {
-  const photos = { paw };
+  const photos = { paw, bmw, eagleScout, tsa, salkehatchie, honorbandofamerica, fca };
 
   return (
     <Layout>
@@ -176,6 +182,48 @@ export const pageQuery = graphql`
       }
     }
     paw: file(name: {eq: "paw"}) {
+      childCloudinaryAsset {
+        fluid {
+          ...CloudinaryAssetFluid
+        }
+      }
+    }
+    bmw: file(name: {eq: "bmw"}) {
+      childCloudinaryAsset {
+        fluid {
+          ...CloudinaryAssetFluid
+        }
+      }
+    }
+    eagleScout: file(name: {eq: "eagleScout"}) {
+      childCloudinaryAsset {
+        fluid {
+          ...CloudinaryAssetFluid
+        }
+      }
+    }
+    tsa: file(name: {eq: "tsa"}) {
+      childCloudinaryAsset {
+        fluid {
+          ...CloudinaryAssetFluid
+        }
+      }
+    }
+    salkehatchie: file(name: {eq: "salkehatchie"}) {
+      childCloudinaryAsset {
+        fluid {
+          ...CloudinaryAssetFluid
+        }
+      }
+    }
+    honorbandofamerica: file(name: {eq: "honorbandofamerica"}) {
+      childCloudinaryAsset {
+        fluid {
+          ...CloudinaryAssetFluid
+        }
+      }
+    }
+    fca: file(name: {eq: "fca"}) {
       childCloudinaryAsset {
         fluid {
           ...CloudinaryAssetFluid
