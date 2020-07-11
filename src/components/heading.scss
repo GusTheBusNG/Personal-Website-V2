@@ -17,24 +17,10 @@
   }
 
   &__line {
-    width: 0;
+    width: 132px;
     height: 3px;
 
     border-radius: $border-radius;
     background-color: getColor(primary);
-
-    @include animation('slideOut 1.5s forwards ease-out');
-  }
-}
-
-@include keyframes(slideOut) {
-  from {
-    width: 0px;
-    opacity: 0;
-  }
-
-  to {
-    width: 132px;
-    opacity: 100%;
   }
 }

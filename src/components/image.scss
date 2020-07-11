@@ -15,18 +15,6 @@
     border: solid 3px getColor(primary);
     border-radius: $border-radius;
 
-    @include animation('moveAndFadeIn 1.5s forwards ease-out');
-  }
-}
-
-@include keyframes(moveAndFadeIn) {
-  from {
-    top: 0;
-    left: 0;
-    opacity: 0;
-  }
-
-  to {
     top: 5%;
     left: 5%;
     opacity: 100%;
