@@ -1,5 +1,6 @@
 $colors: (
-	base: #F8F8F8,
+  base: #F8F8F8,
+  medium-color: #fbfbfb,
 	highlight: #fff,
   dark-text: #1F2933,
   regular-text: #323F4B,
@@ -9,13 +10,14 @@ $colors: (
 );
 //dark theme
 $colors-dark: (
-  base: #F8F8F8,
-	highlight: #fff,
-  dark-text: #1F2933,
-  regular-text: #323F4B,
-  light-text: #52606D,
+  base: #121212,
+  medium-color: #1a1a1a,
+	highlight: #222,
+  dark-text: #FAFAFA,
+  regular-text: #eeeeee,
+  light-text: #bdbdbd,
 	primary: #0967D2,
-	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16)
+	box-shadow: none
 );
 //converting scss variable into css variable
 :root {

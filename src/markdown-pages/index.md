@@ -8,9 +8,6 @@ buttons:
   - openNewTab: false
     link: /professional
     text: Professional Life
-  - openNewTab: false
-    link: /photos
-    text: Some Photos
 scrollIndicator: My Story
 storyHeading: This is My Story
 stories:

@@ -91,7 +91,6 @@ const ProfessionalPage = ({ data: { markdownRemark: { frontmatter: {
         <Heading lineColor="#F66733">{fourthHeading}</Heading>
         <CardHeading
           title={major}
-          titleColor="#323F4B"
           company={school}
           timespan={minor}
         >
@@ -166,7 +165,6 @@ export const pageQuery = graphql`
             name
             link
           }
-          description
         }
         fourthHeading
         school

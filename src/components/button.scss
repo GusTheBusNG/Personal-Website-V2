@@ -6,7 +6,7 @@
 
   border: none;
   border-radius: $border-radius;
-  background-color: transparent;
+  background-color: getColor(highlight);
   box-shadow: getColor(box-shadow);
 
   color: getColor(regular-text);

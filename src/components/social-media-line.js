@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import Mail from '../assets/mail.svg'
 import Pdf from '../assets/pdf.svg'
@@ -31,6 +31,13 @@ const SocialMediaLine = () => {
           }
         }
       }
+      githubLight: file(name: {eq: "github-light"}) {
+        childCloudinaryAsset {
+          fluid {
+            ...CloudinaryAssetFluid
+          }
+        }
+      }
       dribbble: file(name: {eq: "dribbble"}) {
         childCloudinaryAsset {
           fluid {
@@ -47,6 +54,18 @@ const SocialMediaLine = () => {
       }
     }
   `)
+
+  const [githubIcon, setGithubIcon] = useState(
+    window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ?
+      pictures.githubLight.childCloudinaryAsset.fluid :
+      pictures.github.childCloudinaryAsset.fluid
+  );
+
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+    e.matches ? 
+      setGithubIcon(pictures.githubLight.childCloudinaryAsset.fluid) :
+      setGithubIcon(pictures.github.childCloudinaryAsset.fluid);
+  });
 
   return (
     <div className="social-media-line">
@@ -65,7 +84,7 @@ const SocialMediaLine = () => {
       />
       <Image
         alt="github"
-        fluid={pictures.github.childCloudinaryAsset.fluid}
+        fluid={githubIcon}
         outline={false}
         className="social-media-line__image"
         link="https://github.com/GusTheBusNG"

@@ -2,6 +2,7 @@
 
 .heading {
   margin-bottom: 0.5rem;
+  color: getColor(dark-text);
 
   &__content {
     font-weight: 400;
