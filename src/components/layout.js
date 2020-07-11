@@ -6,9 +6,6 @@ import './layout.scss'
 const Layout = ({ children }) => (
   <div className="the-whole-dang-thing">
     <main>{children}</main>
-    {/* <footer>
-      Nicholas Gustafson © {new Date().getFullYear()}
-    </footer> */}
   </div>
 )
 
