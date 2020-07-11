@@ -8,6 +8,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-use-dark-mode`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {

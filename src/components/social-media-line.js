@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
+import useDarkMode from 'use-dark-mode'
 import Mail from '../assets/mail.svg'
 import Pdf from '../assets/pdf.svg'
 import resume from '../assets/resume.pdf'
@@ -55,17 +56,7 @@ const SocialMediaLine = () => {
     }
   `)
 
-  const [githubIcon, setGithubIcon] = useState(
-    window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ?
-      pictures.githubLight.childCloudinaryAsset.fluid :
-      pictures.github.childCloudinaryAsset.fluid
-  );
-
-  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
-    e.matches ? 
-      setGithubIcon(pictures.githubLight.childCloudinaryAsset.fluid) :
-      setGithubIcon(pictures.github.childCloudinaryAsset.fluid);
-  });
+  const { value: isDark } = useDarkMode(false)
 
   return (
     <div className="social-media-line">
@@ -84,7 +75,9 @@ const SocialMediaLine = () => {
       />
       <Image
         alt="github"
-        fluid={githubIcon}
+        fluid={isDark ?
+          pictures.githubLight.childCloudinaryAsset.fluid :
+          pictures.github.childCloudinaryAsset.fluid }
         outline={false}
         className="social-media-line__image"
         link="https://github.com/GusTheBusNG"
