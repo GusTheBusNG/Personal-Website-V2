@@ -76,8 +76,9 @@ const ProfessionalPage = ({ data: { markdownRemark: { frontmatter: {
         <Spacer variant='md' />
         <div className="awards-container">
           {
-            awards.map(award => 
+            awards.map((award, index) => 
               <Card
+                key={index}
                 {...award}
                 picture={{ fluid: photos[award.picture.name], ...award.picture }}
               />
@@ -101,8 +102,8 @@ const ProfessionalPage = ({ data: { markdownRemark: { frontmatter: {
         <Spacer variant="sm" />
         <div className="awards-container">
           {
-            classes.map(class1 => 
-              <Card {...class1} />
+            classes.map((class1, index) => 
+              <Card key={index} {...class1} />
             )
           }
         </div>

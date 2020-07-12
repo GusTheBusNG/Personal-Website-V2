@@ -9,8 +9,9 @@ const HorizontalContainer = ({
 }) => (
   <div className="horizontal-container">
     {
-      data.map(value => 
+      data.map((value, index) => 
         <Card
+          key={index}
           className="horizontal-container__card"
           {...value}
           picture={{ fluid: photos[value.picture.name], ...value.picture }}

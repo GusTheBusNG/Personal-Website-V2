@@ -11,7 +11,7 @@ const Heading = ({ variant, children, className = '', lineColor }) => (
 )
 
 Heading.propTypes = {
-  variant: PropTypes.oneOf(['sm', 'lg']).isRequired,
+  variant: PropTypes.oneOf(['sm', 'lg']),
   children: PropTypes.node.isRequired,
   className: PropTypes.string
 }

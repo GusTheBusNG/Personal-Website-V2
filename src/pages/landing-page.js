@@ -57,10 +57,10 @@ const IndexPage = ({ data: { markdownRemark: { frontmatter: {
         <Heading variant="sm">{storyHeading}</Heading>
         {
           stories.map(({ subheading, content, photo, quote: { content: quoteContent, author} }, index) => (
-            <>
+            <React.Fragment key={index}>
               {
                 index % 2 === 0 ? (
-                  <div className="story" key={subheading}>
+                  <div className="story">
                     <div className="story__left">
                       <Subheading className="story__subheading">{subheading}</Subheading>
                       <Text className="story__text">{content}</Text>
@@ -72,7 +72,7 @@ const IndexPage = ({ data: { markdownRemark: { frontmatter: {
                     </div>
                   </div>
                 ) : (
-                  <div className="story" key={subheading}>
+                  <div className="story">
                     <div className="story__left">
                       <Image className="story__image" fluid={photos[photo]} alt={photo} />
                       <Spacer variant="sm" />
@@ -87,7 +87,7 @@ const IndexPage = ({ data: { markdownRemark: { frontmatter: {
                 )
               }
               <Spacer variant="md" />
-            </>
+            </React.Fragment>
           ))
         }
         <SocialMediaLine />
