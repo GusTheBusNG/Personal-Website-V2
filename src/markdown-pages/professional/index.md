@@ -3,6 +3,24 @@ templateKey: professional
 title: Professional Life
 heading: Professional Experience
 experiences:
+  - title: Applications Engineer
+    company: Medidata Solutions
+    timespan: Jun - Aug 2020
+    picture:
+      name: medidata
+      link: https://www.medidata.com/en/
+    location: New York, NY Remote
+    bullets:
+      - Implemented several major data visualization techniques so the clients can view and interact with their data with ease on smaller viewing windows.
+      - Scalable contributions were made so the team could easily distribute these changes to other areas in the app.
+      - Created a database view for other teams to integrate with.
+    technologies:
+      - Rails
+      - HAML
+      - Ruby
+      - HTML / (S)CSS
+      - JavaScript
+      - MySQL
   - title: Full Stack Developer
     company: BMW
     timespan: May - Aug 2019

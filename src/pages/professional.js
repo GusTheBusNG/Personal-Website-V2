@@ -38,8 +38,9 @@ const ProfessionalPage = ({ data: { markdownRemark: { frontmatter: {
   salkehatchie: { childCloudinaryAsset: { fluid: salkehatchie }},
   honorbandofamerica: { childCloudinaryAsset: { fluid: honorbandofamerica }},
   fca: { childCloudinaryAsset: { fluid: fca }},
+  medidata: { childCloudinaryAsset: { fluid: medidata }},
 }}) => {
-  const photos = { paw, bmw, eagleScout, tsa, salkehatchie, honorbandofamerica, fca };
+  const photos = { paw, bmw, eagleScout, tsa, salkehatchie, honorbandofamerica, fca, medidata };
 
   return (
     <Layout>
@@ -223,6 +224,13 @@ export const pageQuery = graphql`
       }
     }
     fca: file(name: {eq: "fca"}) {
+      childCloudinaryAsset {
+        fluid {
+          ...CloudinaryAssetFluid
+        }
+      }
+    }
+    medidata: file(name: {eq: "medidata"}) {
       childCloudinaryAsset {
         fluid {
           ...CloudinaryAssetFluid
