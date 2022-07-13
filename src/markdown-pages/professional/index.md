@@ -3,7 +3,29 @@ templateKey: professional
 title: Professional Life
 heading: Professional Experience
 experiences:
-  - title: Applications Engineer
+  - title: Associate Applications Engineer
+    company: Medidata Solutions
+    timespan: Jun - Aug 2020
+    picture:
+      name: medidata
+      link: https://www.medidata.com/en/
+    location: New York, NY
+    bullets:
+      - Boosted performance of an object sharing service by 8x that handles millions of objects being filtered and written to the database by reducing the computation load with adding more constraints to the queries.
+      - Refactored legacy React components into hooks to increase reusability by 50% and to increase readability.
+      - Integrated a cohesive React state management pattern for increased scalability and readability
+      - Fixed a bug that allowed users to input duplicates into 4 database tables dealing with thousands of rows with production data.
+      - Pioneered PACT contract testing for the system to increase confidence in successful connections to other services.
+      - Collaborated with other products to establish contract testing as a common practice between services for more reliable requests and responses across the company.
+      - Developed Sumo Logic analytics queries to alert developers when users were experiencing errors, therefore, allowing us to get on top of errors before the user could submit a critical incident ticket.
+    technologies:
+      - Rails
+      - React
+      - Ruby
+      - HTML / (S)CSS
+      - JavaScript
+      - MySQL
+  - title: Applications Engineer Internship
     company: Medidata Solutions
     timespan: Jun - Aug 2020
     picture:
@@ -21,7 +43,7 @@ experiences:
       - HTML / (S)CSS
       - JavaScript
       - MySQL
-  - title: Full Stack Developer
+  - title: Full Stack Developer Internship
     company: BMW
     timespan: May - Aug 2019
     picture:
@@ -40,7 +62,7 @@ experiences:
       - HTML / (S)CSS
       - JavaScript
       - Webpack
-  - title: Cloud Architect
+  - title: Cloud Architect Internship
     company: BMW
     timespan: Jan - May 2019
     picture:
@@ -97,7 +119,7 @@ experiences:
       - HTML / (S)CSS
       - PHP
       - JavaScript
-  - title: Software Developer
+  - title: Software Developer Internship
     company: BMW
     timespan: May - Aug 2018
     picture:
@@ -117,7 +139,7 @@ experiences:
       - HTML / (S)CSS
       - Protractor
       - Appium
-  - title: Software Developer
+  - title: Software Developer Internship
     company: BMW
     timespan: Aug - Dec 2017
     picture:
@@ -265,7 +287,7 @@ fourthHeading: Education
 school: Clemson University
 major: Bachelor of Science in Computer Science
 minor: Minor in Business Administration
-gpa: GPA 3.89/4.00
+gpa: GPA 3.87/4.00
 subheading: Notable Classes
 classes:
   - title: Virtual Reality Systems
