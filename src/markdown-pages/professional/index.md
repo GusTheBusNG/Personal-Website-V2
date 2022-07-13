@@ -5,7 +5,7 @@ heading: Professional Experience
 experiences:
   - title: Associate Applications Engineer
     company: Medidata Solutions
-    timespan: Jun - Aug 2020
+    timespan: Aug 2021 - Present
     picture:
       name: medidata
       link: https://www.medidata.com/en/
@@ -177,7 +177,7 @@ experiences:
       - Unity
       - C#
       - SteamVR
-  - title: Virtual Reality Creative Inquery IT
+  - title: Virtual Reality Creative Inquiry IT
     company: Clemson University
     timespan: Jan - May 2018
     picture:
