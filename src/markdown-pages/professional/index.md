@@ -80,45 +80,6 @@ experiences:
       - AWS
       - MariaDB
       - Node.js
-  - title: Full Stack Developer
-    company: Clemson University
-    timespan: Feb - May 2020
-    picture:
-      name: paw
-      link: https://clemsonchoirs.com
-    location: Clemson, SC
-    button:
-      openNewTab: true
-      link: https://clemsonchoirs.com
-      text: Check it out
-    bullets:
-      - Designing and implementing Clemson University’s Vocal Arts new website.
-      - Created using GatsbyJS and Netlify CMS to allow the admins an easy access to edit content and make the website incredibly performant
-    technologies:
-      - React
-      - Gatsby
-      - GraphQL
-      - HTML / (S)CSS
-      - JavaScript
-  - title: Full Stack Developer
-    company: Clemson University
-    timespan: Jan 2018 - Present
-    picture:
-      name: paw
-      link: http://tband.people.clemson.edu
-    location: Clemson, SC
-    button:
-      openNewTab: true
-      link: http://tband.people.clemson.edu
-      text: Check it out
-    bullets:
-      - Designed and developed a completely new website for Tiger Band, Clemson University Drumline, and Clemson University Tiger Band Association.
-      - Continuous development and improvements.
-      - Working with a team of 3 students to make the web experience for Tiger Band better.
-    technologies:
-      - HTML / (S)CSS
-      - PHP
-      - JavaScript
   - title: Software Developer Internship
     company: BMW
     timespan: May - Aug 2018
@@ -216,7 +177,7 @@ projects:
       - JavaScript
   - title: Tiger Band Website
     company: Clemson University
-    timespan: Jan 2018 - Present
+    timespan: Jan 2018 - May 2021
     picture:
       name: paw
       link: http://tband.people.clemson.edu
