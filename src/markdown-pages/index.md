@@ -1,8 +1,8 @@
 ---
-templateKey: "landing-page"
-title: "Story"
-heading: "Hi, I'm Nick"
-subheading: "I’m a passionate developer with an eye for design that also plays trumpet, takes a few photos, and loves God."
+templateKey: landing-page
+title: Story
+heading: Hi, I'm Nick
+subheading: I’m a passionate developer with an eye for design that also plays trumpet, takes a few photos, and loves Jesus Christ.
 photo: Nick
 buttons:
   - openNewTab: false
