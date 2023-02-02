@@ -6,7 +6,7 @@
   "author": "Nicholas Gustafson <nichgus7@gmail.com>",
   "dependencies": {
     "dotenv": "^8.2.0",
-    "gatsby": "^2.20.25",
+    "gatsby": "^5.5.0",
     "gatsby-image": "^2.3.4",
     "gatsby-plugin-google-analytics": "^2.3.11",
     "gatsby-plugin-google-fonts": "^1.0.1",
@@ -15,7 +15,7 @@
     "gatsby-plugin-react-helmet": "^3.2.4",
     "gatsby-plugin-react-svg": "^3.0.0",
     "gatsby-plugin-sass": "^2.2.4",
-    "gatsby-plugin-sharp": "^2.5.6",
+    "gatsby-plugin-sharp": "^2.14.4",
     "gatsby-plugin-use-dark-mode": "^1.1.2",
     "gatsby-source-cloudinary": "^0.1.13",
     "gatsby-source-filesystem": "^2.2.5",
